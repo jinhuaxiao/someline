@@ -29,12 +29,15 @@ Vue.component(
 
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
+Vue.component('find', require('./components/console/find.vue'));
+
 
 // Vuex
 const vuexStore = new Vuex.Store({
     state: {
+
         platform: 'console',
-        count: 0
+        count: 1  
     },
     mutations: {
         increment (state) {

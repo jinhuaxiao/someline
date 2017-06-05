@@ -33,7 +33,7 @@
                     <i class="fa fa-fw fa-angle-right text"></i>
                     <i class="fa fa-fw fa-angle-down text-active"></i>
                   </span>
-                <i class="glyphicon glyphicon-lock icon text-info-lter"></i>
+                <i class="fa fa-etsy"></i>
                 <span class="font-bold">Ebay</span>
             </a>
         </li>

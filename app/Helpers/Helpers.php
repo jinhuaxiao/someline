@@ -18,6 +18,7 @@ if (!function_exists('smart_mix')) {
     function smart_mix($path, $manifestDirectory = '', $supportHot = true)
     {
         $path = mix($path, $manifestDirectory);
+        
         if (!$supportHot) {
             $hotUrl = '//localhost:8080';
             if (starts_with($path, $hotUrl)) {
