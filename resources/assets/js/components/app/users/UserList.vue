@@ -5,9 +5,6 @@
 
     <div class="wrapper-md">
 
-        <h1>{{ $t('user.users') }}</h1>
-        <hr>
-
         <div class="row">
 
             <div class="list-group list-group-lg list-group-sp">
@@ -47,7 +44,7 @@
         methods: {
             fetchData(){
 
-                this.$api.get('/users', {
+                this.$api.get('/users?page=2', {
                     params: {
 //                        include: ''
                     }

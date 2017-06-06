@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
 
         User::create([
 //            'slid' => '1',
-            'name' => "Libern Lin",
+            'name' => "Xiao jinhua",
             'email' => 'xiaojinhua@sailvan.com',
             'password' => bcrypt('jinhua'),
             'remember_token' => str_random(10),
@@ -33,6 +33,6 @@ class UsersTableSeeder extends Seeder
             'status' => 1,
         ]);
 
-        factory(User::class, 50)->create();
+        factory(User::class, 500)->create();
     }
 }

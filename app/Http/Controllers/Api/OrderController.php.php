@@ -1,11 +1,11 @@
 <?php
 
-namespace Someline\Http\Controllers\Console;
+namespace Someline\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use Someline\Http\Controllers\BaseController;
+use Someline\Http\Controllers\Controller;
 
-class EbayController extends BaseController
+class OrderController.php extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,15 +14,7 @@ class EbayController extends BaseController
      */
     public function index()
     {
-        return view("console.ebay.find");
-    }
-
-    /**
-     *  datatable test...
-     */
-    public function datatable()
-    {
-        return view("console.ebay.datatable");
+        //
     }
 
     /**

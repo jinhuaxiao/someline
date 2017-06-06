@@ -9,7 +9,8 @@
         "dingo/api": "1.0.*@dev",
         "jcorry/gootranslate": "^0.0.4",
         "rap2hpoutre/laravel-log-viewer": "^0.7.0",
-        "someline/starter-framework": "1.5.*"
+        "someline/starter-framework": "1.5.*",
+        "yajra/laravel-datatables-oracle": "^7.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

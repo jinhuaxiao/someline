@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Someline Starter',
+    'name' => 'Someline learning',
 
     /*
     |--------------------------------------------------------------------------
@@ -122,7 +122,7 @@ return [
 
     'log' => env('APP_LOG', 'single'),
 
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
+    'log_level' => env('APP_LOG_LEVEL', 'daily'),
 
     /*
     |--------------------------------------------------------------------------
@@ -195,6 +195,7 @@ return [
         Someline\Providers\PolymorphicServiceProvider::class,
 
         Jcorry\GooTranslate\GooTranslateServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
     ],
 
@@ -250,6 +251,7 @@ return [
         'Countries' => Monarobase\CountryList\CountryListFacade::class,
         'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
 
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'GooTranslate' => Jcorry\GooTranslate\GooTranslateFacade::class,
 
     ],

@@ -10,6 +10,7 @@ use Someline\Http\Requests\UserCreateRequest;
 use Someline\Http\Requests\UserUpdateRequest;
 use Someline\Repositories\Interfaces\UserRepository;
 use Someline\Validators\UserValidator;
+use Yajra\Datatables\Datatables;
 
 class UsersController extends BaseController
 {
@@ -31,6 +32,11 @@ class UsersController extends BaseController
         $this->validator = $validator;
     }
 
+    public function datatable()
+    {
+        return 1;
+        //return Datatables::of($this->repository->all())->make(true);
+    }
 
     /**
      * Display a listing of the resource.
@@ -39,7 +45,8 @@ class UsersController extends BaseController
      */
     public function index()
     {
-        return $this->repository->all();
+        //return $this->repository->all();
+        return $this->repository->paginate(5);
     }
 
     /**

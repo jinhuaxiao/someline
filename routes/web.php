@@ -57,6 +57,7 @@ Route::group(['prefix' => 'console', 'middleware' => 'auth', 'namespace' => 'Con
     Route::get('/', 'ConsoleController@getConsoleHome');
     Route::get('oauth', 'ConsoleController@getOauth');
     Route::get('ebay', 'EbayController@index');
+    Route::get('datatable', 'EbayController@datatable');
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
     Route::group(['prefix' => 'users'], function () {
