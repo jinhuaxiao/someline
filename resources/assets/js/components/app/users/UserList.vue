@@ -68,7 +68,7 @@
                             current:this.pagination.current_page,  // 当前页数，   默认为1                             类型Number
                             pagenum:10, // 每页显示条数,默认10                              类型Number
                             pagegroup:5,    // 分页条数     默认为5，需传入奇数                 类型Number
-                            skin:'#16a086'  // 选中页码的颜色主题 默认为'#16a086'               类型String
+                            skin:'#337ab7'  // 选中页码的颜色主题 默认为'#16a086'               类型String
                         };
                     }).bind(this))
                     .catch((error => {
