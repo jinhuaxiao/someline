@@ -34,8 +34,7 @@ class UsersController extends BaseController
 
     public function datatable()
     {
-        return 1;
-        //return Datatables::of($this->repository->all())->make(true);
+        return Datatables::of($this->repository->getForDatatable())->make(true);
     }
 
     /**

@@ -17,6 +17,10 @@
 
         </div>
 
+        <div class="row">
+            <pagination :pageInfo="pageInfo" @change="fetchData"></pagination>
+        </div>
+
     </div>
 
 </template>
@@ -24,15 +28,17 @@
 <script>
     export default{
         props: [],
-        data(){
+        data() {
             return {
-//                msg: 'hello vue',
                 items: [],
-            }
+                pagination:{},
+                pageInfo: {},
+            };
         },
         computed: {},
         components: {
             'sl-user-list-item': require('./UserListGroupItem.vue'),
+            'pagination': require('../../console/pagination'),
         },
         mounted(){
             console.log('Component Ready.');
@@ -42,9 +48,12 @@
         watch: {},
         events: {},
         methods: {
-            fetchData(){
+            fetchData(page){
 
-                this.$api.get('/users?page=2', {
+                if (typeof page === 'undefined') {
+                    page = 1;
+                }
+                this.$api.get('/users?page=' + page, {
                     params: {
 //                        include: ''
                     }
@@ -52,6 +61,15 @@
                     .then((response => {
                         console.log(response);
                         this.items = response.data.data;
+                        this.pagination = response.data.meta.pagination;
+                        this.pageInfo = {
+                            total:this.pagination.total,  // 记录总条数   默认空，如果小于pageNum则组件不显示   类型Number
+                            total_pages:this.pagination.total_pages,
+                            current:this.pagination.current_page,  // 当前页数，   默认为1                             类型Number
+                            pagenum:10, // 每页显示条数,默认10                              类型Number
+                            pagegroup:5,    // 分页条数     默认为5，需传入奇数                 类型Number
+                            skin:'#16a086'  // 选中页码的颜色主题 默认为'#16a086'               类型String
+                        };
                     }).bind(this))
                     .catch((error => {
                         console.error(error);

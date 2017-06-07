@@ -3,9 +3,9 @@
 namespace Someline\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use Someline\Http\Controllers\Controller;
+use Someline\Http\Controllers\BaseController;
 
-class OrderController.php extends Controller
+class OrderController.php extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class OrderController.php extends Controller
      */
     public function index()
     {
-        //
+        return "hi...";
     }
 
     /**

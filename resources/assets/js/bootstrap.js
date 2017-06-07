@@ -87,6 +87,8 @@ window.axios.defaults.headers.common = {
     'Accept-Language': window.Someline.locale
 };
 
+
+
 Vue.prototype.$http = window.$http = window.axios;
 
 var apiAxios = axios.create({
@@ -110,3 +112,4 @@ Vue.prototype.$api = window.$api = apiAxios;
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+

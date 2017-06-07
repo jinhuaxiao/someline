@@ -17,6 +17,11 @@ class EbayController extends BaseController
         return view("console.ebay.find");
     }
 
+    public function test()
+    {
+        return "hi......";
+    }
+
     /**
      *  datatable test...
      */

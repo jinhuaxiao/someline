@@ -2548,6 +2548,10 @@ laravel-mix@0.8.9:
     webpack-notifier "^1.4.1"
     webpack-stats-plugin "^0.1.4"
 
+laravel-vue-pagination@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/laravel-vue-pagination/-/laravel-vue-pagination-1.0.5.tgz#6f27e0f712b150fff3d331569f95f2c35d165c61"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"

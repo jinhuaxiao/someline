@@ -62,4 +62,10 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
         $this->model = $this->model->whereIn('user_id', $userIds);
         return $this;
     }
+
+    public function getForDatatable()
+    {
+        $user = $this->model->query()->select(['*']);
+        return $user;
+    }
 }

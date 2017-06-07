@@ -1,8 +1,11 @@
 @extends('angulr.layout.master')
 
 @push('stylesheets')
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" type="text/css"/>
 <link rel="stylesheet" href="{{url(smart_mix("assets/css/console.vendor.css",'',false))}}" type="text/css"/>
 <link rel="stylesheet" href="{{url(mix("assets/css/console.main.css"))}}" type="text/css"/>
+
 @endpush
 
 @push('scripts')

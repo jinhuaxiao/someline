@@ -30,6 +30,7 @@ Vue.component(
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
 Vue.component('find', require('./components/console/find.vue'));
+
 Vue.component('sl-users', require('./components/app/users/UserList.vue'));
 
 
