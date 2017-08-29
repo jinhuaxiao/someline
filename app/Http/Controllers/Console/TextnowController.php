@@ -1,11 +1,12 @@
 <?php
 
-namespace Someline\Http\Controllers\Api;
+namespace Someline\Http\Controllers\Console;
 
 use Illuminate\Http\Request;
+use Someline\Http\Controllers\Controller;
 use Someline\Http\Controllers\BaseController;
 
-class OrderController extends BaseController
+class TextnowController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class OrderController extends BaseController
      */
     public function index()
     {
-        return "hi...";
+        return view("console.textnow.index");
     }
 
     /**

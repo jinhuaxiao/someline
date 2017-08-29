@@ -18,6 +18,8 @@ Vue.component('sl-user-list', require('./components/app/users/UserList.vue'));
 
 // Vuex
 import Vuex from 'vuex'
+
+
 const vuexStore = new Vuex.Store({
     state: {
         platform: 'app',

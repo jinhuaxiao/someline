@@ -59,11 +59,7 @@
         },
         methods:{
           alert: function(){
-            console.log('....');
-            this.$toaster.success('hi,Your toaster success message.');
-            this.$toaster.warning('hi,Your toaster success message.');
-            this.$toaster.info('hi,Your toaster success message.');
-            this.$toaster.error('hi,Your toaster success message.');
+            this.$toaster.success('hi,something things success message.');
           }
 
         }

@@ -8,9 +8,9 @@
     </button>
     <!-- brand -->
     <a href="{{url('')}}" class="navbar-brand text-lt">
-        <img src="https://www.someline.com/images/logo/someline-icon-64.png" alt=".">
+        <i class="fa fa-btc"></i>
         <span class="hidden-folded m-l-xs">
-            <img src="https://www.someline.com/images/logo/someline-logo@2x.png" style="max-height: 18px" alt=".">
+            Apollo
         </span>
     </a>
     <!-- / brand -->

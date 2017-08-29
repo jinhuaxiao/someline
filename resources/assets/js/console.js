@@ -12,6 +12,14 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import Toaster from 'v-toaster'
+
+// You need a specific loader for CSS files like https://github.com/webpack/css-loader
+import 'v-toaster/dist/v-toaster.css'
+
+// optional set default imeout, the default is 10000 (10 seconds).
+Vue.use(Toaster, {timeout: 5000})
+
 Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue')
@@ -30,7 +38,7 @@ Vue.component(
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
 Vue.component('find', require('./components/console/find.vue'));
-
+Vue.component('textnow', require('./components/console/textnow.vue'));
 Vue.component('sl-users', require('./components/app/users/UserList.vue'));
 
 
@@ -39,7 +47,7 @@ const vuexStore = new Vuex.Store({
     state: {
 
         platform: 'console',
-        count: 1  
+        count: 1
     },
     mutations: {
         increment (state) {
