@@ -8,32 +8,29 @@
                     <div class="panel-body">
                       <form class="form-inline" role="form">
                         <div class="form-group">
-                          <label class="sr-only" for="exampleInputEmail2">keyword</label>
-                          <input type="text" class="form-control"  placeholder="Enter email">
+                          <label class="sr-only" for="exampleInputPassword2">Phone</label>
+                          <input type="text" class="form-control" :mode="formData.phone_number" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputPassword2">name</label>
+                          <input type="text" class="form-control" :model="formData.username"  placeholder="username">
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputEmail2">email</label>
+                          <input type="email" class="form-control" :model="formData.email"  placeholder="Enter email">
                         </div>
                         <div class="form-group">
                           <label class="sr-only" for="exampleInputPassword2">Password</label>
-                          <input type="text" class="form-control"  placeholder="Password">
+                          <input type="text" class="form-control" :model="formData.password" placeholder="Password">
                         </div>
                         <div class="form-group m-l m-r-xs">
                           <label class="i-switch i-switch-md bg-info m-t-xs m-r">
-                              <input type="checkbox" >
+                              <input type="checkbox"  :model="formData.status" >
                               <i></i>
                           </label>
                         </div>
-                        <div class="form-group m-l m-r-xs">
-                          <label class="i-switch i-switch-md bg-info m-t-xs m-r">
-                              <input type="checkbox" @click="alert" v-model="data" id="test-box">
-                              <i></i>
-                          </label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Sign in</button>
-                        <span ng-controller="ModalDemoCtrl">
-                          <script type="text/ng-template" id="myModalContent.html">
-                            <div ng-include="'tpl/modal.form.html'"></div>
-                          </script>
-                          <button class="btn btn-success" @click="alert">Form in a modal</button>
-                          {{ data }}
+                        <span>
+                          <button class="btn btn-success" @click.prevent="creat">add</button>
                         </span>
                       </form>
                     </div>
@@ -51,6 +48,9 @@
     export default {
         data(){
           return {
+            formData:{
+              status:true
+            },
             data:null
           }
         },
@@ -58,6 +58,20 @@
             console.log('ebay Component ready...')
         },
         methods:{
+          creat: function(){
+                console.log(this.formData);
+                this.$api.post('/textnow', {
+                  'formData':this.formData
+                })
+                  .then((response => {
+                      console.log(response);
+                      this.$toaster.success('hi,something things success message.');
+                  }).bind(this))
+                  .catch((error => {
+                      this.$toaster.error('error......');
+                      console.error(error);
+                  }).bind(this));
+          },
           alert: function(){
             this.$toaster.success('hi,something things success message.');
           }

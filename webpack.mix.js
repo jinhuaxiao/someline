@@ -68,8 +68,8 @@ mix.combine([
     ], 'public/assets/js/app.theme.js');
 
 // BrowserSync
-mix.browserSync({
-    proxy: 'dev.someline.app',
-    port: 3000,
-    open: false
-})
+// mix.browserSync({
+    // proxy: 'dev.someline.app',
+    // port: 3000,
+    // open: false
+// })

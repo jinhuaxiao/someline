@@ -39,6 +39,15 @@ $api->version('v1', [
                 $api->delete('/{id}', 'UsersController@destroy');
             });
 
+            // textnow
+            $api->group(['prefix' => 'textnow'], function (Router $api) {
+                $api->get('/', 'TextnowsController@index');
+                $api->post('/', 'TextnowsController@store');
+                $api->get('/{id}', 'TextnowsController@show');
+                $api->put('/{id}', 'TextnowsController@update');
+                $api->delete('/{id}', 'TextnowsController@destroy');
+            });
+
         });
 
     });

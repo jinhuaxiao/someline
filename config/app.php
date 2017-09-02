@@ -194,6 +194,7 @@ return [
         Someline\Providers\RepositoryServiceProvider::class,
         Someline\Providers\PolymorphicServiceProvider::class,
 
+
         Jcorry\GooTranslate\GooTranslateServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
 

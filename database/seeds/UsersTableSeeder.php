@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
             'country' => 'CN',
             'timezone' => 'Asia/Shanghai',
             'locale' => 'en',
-            'username' => 'libern',
+            'username' => 'xiaojinhua',
             'phone_number' => '+1234567890',
             'status' => 1,
         ]);
