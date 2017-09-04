@@ -76,7 +76,13 @@
             this.$toaster.success('hi,something things success message.');
           }
 
-        }
+        },
+        http: {
+            root: '/api',
+            headers: {
+                Accept: 'application/x.someline.v1+json'
+            }
+        },
 
     }
 </script>

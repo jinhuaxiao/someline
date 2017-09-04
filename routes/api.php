@@ -27,6 +27,9 @@ $api->version('v1', [
         $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (Router $api) {
 
             $api->group(['prefix' => 'datatable'], function (Router $api) {
+                $api->get("/test",function(){
+                    return "test";
+                });
                 $api->post('/', 'UsersController@datatable');
             });
             // /users

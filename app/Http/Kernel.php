@@ -35,12 +35,12 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Someline\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+            // \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
             \Someline\Support\Middleware\LocaleMiddleware::class,
         ],
 
         'api' => [
-//            'throttle:60,1',
+           // 'throttle:60,1',
             'bindings',
             \Someline\Api\Middleware\ApiAccessMiddleware::class,
             \Someline\Support\Middleware\LocaleMiddleware::class,
