@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTextnowsTable extends Migration
+class CreateEbayAccountsTable extends Migration
 {
 
 	/**
@@ -13,13 +13,17 @@ class CreateTextnowsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('textnows', function(Blueprint $table) {
-            $table->increments('textnow_id');
+		Schema::create('ebay_accounts', function(Blueprint $table) {
+            $table->increments('ebay_account_id');
             $table->unsignedInteger('user_id')->index();
 
             // Adding more table related fields here...
             
 
+            $table->string('email', 150)->unique()->nullable();
+            $table->string('password', 190)->nullable();
+            $table->tinyInteger('status')->default(0);
+            
             $table->unsignedInteger('created_by')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->ipAddress('created_ip')->nullable();
@@ -36,7 +40,7 @@ class CreateTextnowsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('textnows');
+		Schema::drop('ebay_accounts');
 	}
 
 }

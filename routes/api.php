@@ -20,17 +20,15 @@ $api->version('v1', [
     'middleware' => ['api']
 ], function (Router $api) {
 
+    // $api->group(['middleware' => ['auth:api']], function (Router $api) {
     $api->group(['middleware' => ['auth:api']], function (Router $api) {
-    // $api->group(['middleware' => ['']], function (Router $api) {
 
         // Rate: 100 requests per 5 minutes
         $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (Router $api) {
 
             $api->group(['prefix' => 'datatable'], function (Router $api) {
-                $api->get("/test",function(){
-                    return "test";
-                });
                 $api->post('/', 'UsersController@datatable');
+                $api->get('/', 'UsersController@datatable');
             });
             // /users
             $api->group(['prefix' => 'users'], function (Router $api) {

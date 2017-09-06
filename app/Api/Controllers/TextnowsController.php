@@ -51,23 +51,21 @@ class TextnowsController extends BaseController
     public function store(TextnowCreateRequest $request)
     {
 
-      echo "sssssssss";
         $data = $request->all();
-        print_r($data);
-        exit;
+        $data = $data['formData'];
 
         $this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_CREATE);
 
         $textnow = $this->repository->create($data);
 
         // throw exception if store failed
-//        throw new StoreResourceFailedException('Failed to store.');
+       // throw new StoreResourceFailedException('Failed to store.');
 
         // A. return 201 created
-//        return $this->response->created(null);
+        return $this->response->created(null);
 
         // B. return data
-        return $textnow;
+        // return $textnow;
 
     }
 
